@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}
-Welcome to World
+title
 {% endblock %}
 
 {% block content %}
-{% load crispy_forms_tags %}
-
+<div>
     <h4>{{ file.file.name }}</h4>
     <p>{{ file.description }}</p>
     {% if user_comment_permission == True or file.creator == request.user %}
@@ -19,12 +18,11 @@ Welcome to World
     <h4>Comments:</h4>
     <ul>
         {% for comment in comments %}
-            USERNAME: <li>{{ comment.creator.username }}</li>
-            COMMENT: <li>{{ comment }}</li>
+            <li>USERNAME: {{ comment.creator.username }}</li>
+            <li>COMMENT: {{ comment }}</li>
         {% empty %}
             <li>No files comment yet.</li>
         {% endfor %}
     </ul>
 </div>
-
 {% endblock %}
