@@ -12,9 +12,9 @@ services:
     volumes:
       - ./data/db:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=fileshare
-      - POSTGRES_USER=aytac
-      - POSTGRES_PASSWORD=aytac2000
+      - POSTGRES_DB=file_share_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     container_name: postgres_db
 
   # Django Application
