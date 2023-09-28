@@ -75,7 +75,3 @@ python manage.py migrate
 ```bash
 docker-compose up
 ```
-
----
-
-Copy and paste the above content into your README.md file for clear instructions on setting up and running your Django project.
