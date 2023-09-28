@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
 {% block title %}
-Welcome to World
+title
 {% endblock %}
 
 {% block content %}
 
 {% load crispy_forms_tags %}
 <div class="container py-5">
-    <div><a href="/friend-send">Send a file to friend</a></div>
+    <div><a href="/friend-send">Faylı göndər</a></div>
     <h2>Upload Files</h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
@@ -30,7 +30,7 @@ Welcome to World
         <li><a style="text-decoration:none; color:green" href="/file/{{ file.id }}">{{ file.file.name }}</a></li>
         <a href="/download/{{ file.id }}">Download</a>
         {% empty %}
-        <li>No files uploaded yet.</li>
+        <li>Fayl yüklənməyib</li>
         {% endfor %}
     </ul>
 </div>
